@@ -44,8 +44,7 @@ For example, in those examples we reached the result which is the best algorithm
 
 <br>![image](https://github.com/furkancankay/SortExamples/assets/139324087/76aba83b-6d79-4ab2-bce4-3d2e300cdd88)<br>
 
-And finally for small data, we can see that the merge algorithm is more logical than insertion.
-
+And finally, we can see that for small data, the quick sort algorithm makes more sense than the insertion or merge algorithm.
 
 ## ⚠️ Warning
 

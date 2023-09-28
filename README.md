@@ -29,7 +29,11 @@ The notation is O(nlog(n))
 
 
 ## A Few Screenshots
+![image](https://github.com/furkancankay/SortExamples/assets/139324087/f5084610-c584-42f5-b393-d3cd4ee6db0d)
+For example, in those examples we reached the result which is the best algorithm is insertion with the Large and Huge database.
 
+![image](https://github.com/furkancankay/SortExamples/assets/139324087/76aba83b-6d79-4ab2-bce4-3d2e300cdd88)
+And finally for small data, we can see that the merge algorithm is more logical than insertion.
 
 ## ⚠️ Warning
 

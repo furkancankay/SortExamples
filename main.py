@@ -4,14 +4,10 @@ import random
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Button
 
-
-
 dataType = 2
 data = [5, 4, 7, 6, 3, 2, 1, 8, 9, 6, 0, 1]
 databubble = datamerge = dataquick = datainsertion = data
-
 sys.setrecursionlimit(5000)
-
 
 def routerSmall(event):
     updateSmall()
@@ -49,7 +45,6 @@ def updateHuge():
         data.append(random.randint(0, 4500))
     updateData(data)
 
-
 def updateData(data):
     plt.close()
 
@@ -73,10 +68,7 @@ def updateData(data):
     merge_sort(datamerge)
     mergeProcess = time.time() - mergeStart
 
-    
-
     y = [bubbleProcess, quickProcess, insertionProcess, mergeProcess]
-
 
     fig, ax = plt.subplots()
     line, = ax.plot(x, y)
@@ -99,6 +91,7 @@ def updateData(data):
     ax_button = plt.axes([0.81, 0.9, 0.09, 0.06])
     buttonH = Button(ax_button, 'Huge', hovercolor='0.9')
     buttonH.on_clicked(routerHuge)
+    
     if(len(data) == 12):
         plt.text(-9, 0, 'Length: 12')
     if(len(data) == 1_000):
@@ -132,11 +125,6 @@ def updateData(data):
     plt.text(-9, 1, smallestProcess)
     plt.text(-9, 0.5, secondSmallestProcess)
     plt.show()
-
-
-
-
-
 
 
 def bubble_sort(arr):
@@ -207,36 +195,6 @@ def merge_sort(arr):
             j += 1
             k += 1
     return arr
-
-
-class Apple:
-    def __init__(self):
-        self.id = 1
-        self.size = 1
-        self.color = 'red'
-MyApples = []
-
-for i in range(12):
-    apple = Apple()
-    apple.id = i
-    apple.size = random.randint(1,20)
-    apple.color = random.choice(['Yellow','Red','Green'])
-    MyApples.append([apple.id+1, apple.size , apple.color])
-print(MyApples)
-
-def bubbleForApples(arr):
-    if len(arr) <= 1:
-        return arr
-    else:
-        for i in range(len(arr)):
-            for j in range(len(arr)):
-                if arr[i][1] < arr[j][1]:
-                    temp = arr[i]
-                    arr[i] = arr[j]
-                    arr[j] = temp
-        return arr
-
-print(bubbleForApples(MyApples))
 
 bubbleStart = time.time()
 bubble_sort(databubble)
